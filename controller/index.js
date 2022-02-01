@@ -2,7 +2,7 @@
 
 const getToken = (req, res) => {
   res.send({
-    token: 'test1234'
+    token: 'test123456'
   });
 };
 
