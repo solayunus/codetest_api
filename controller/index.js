@@ -1,13 +1,19 @@
-const db = require('../config');
+//const db = require('../config');
 
-const getText = (req, res) => {
-  db.query('SELECT * FROM content_db', (err, result) => {
-    if (err) {
-      console.log(err);
-    }
-    res.send(result);
+const getToken = (req, res) => {
+  res.send({
+    token: 'test1234'
   });
 };
+
+// const getToken= (req, res) => {
+//   db.query('SELECT * FROM content_db', (err, result) => {
+//     if (err) {
+//       console.log(err);
+//     }
+//     res.send(result);
+//   });
+// };
 
 const createArticleComment = (request, response) => {
   const { text } = request.body;
@@ -24,4 +30,4 @@ const createArticleComment = (request, response) => {
   );
 };
 
-module.exports = { getText };
+module.exports = { getToken};

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const textCtrl = require('../controller/index');
+const tokenCtrl = require('../controller/index');
 
-router.get('/', textCtrl.getText);
+router.use('/', tokenCtrl.getToken);
 
 
 module.exports = router;
